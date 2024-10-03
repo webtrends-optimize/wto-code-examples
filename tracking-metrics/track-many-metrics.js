@@ -1,3 +1,4 @@
+// This uses delegation to handle times where the element isn't available all the time.
 // Based on the page https://www.webtrends-optimize.com/google-optimize-sunset/
 
 let list = {
