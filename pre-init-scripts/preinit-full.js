@@ -132,8 +132,10 @@ if (!supportsES6) {
 
 //Page Hide
 (function pageHide(){
+    if(!WT.optimizeModule.prototype.whitelist) WT.optimizeModule.prototype.whitelist = [];
+    
     if (window.location.href.match(/_wt.mode=staging/i)) {
-        var stagingWhitelist = WT.optimizeModule.prototype.whitelist_STAGING;
+        var stagingWhitelist = WT.optimizeModule.prototype.whitelist_STAGING || [];
         for (var i = 0; i < stagingWhitelist.length; i++) {
             WT.optimizeModule.prototype.whitelist.push(stagingWhitelist[i]);
         }
